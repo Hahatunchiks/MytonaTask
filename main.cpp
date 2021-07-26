@@ -10,9 +10,9 @@
 
 int main() {
     // solveFirstTask();
-    //solveSecondTask();
+    solveSecondTask();
     //solveThirdTask();
-    solveFourthTask();
+    //solveFourthTask();
     //solveFifthTask();
     return 0;
 }

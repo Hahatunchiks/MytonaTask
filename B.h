@@ -1,11 +1,16 @@
 #ifndef MYTONATASKS_B_H
 #define MYTONATASKS_B_H
 #include <iostream>
-#include <string>
 #include <vector>
-#include <cstdlib>
 #include <algorithm>
 #include <cmath>
+
+void printArray(const std::vector<int> &v) {
+    for(const auto &i : v) {
+        std::cout << i << " ";
+    }
+    std::cout << std::endl;
+}
 
 void solveSecondTask() {
     std::vector<int> A(10);
@@ -18,15 +23,17 @@ void solveSecondTask() {
     for (auto &i : B) {
         i = std::rand() % 1000;
     }
+
+    std::cout << "First array\n";
+    printArray(A);
+    std::cout << "Second array\n";
+    printArray(B);
     std::vector<int> C(A.begin(), A.end());
     C.insert(C.end(), B.begin(), B.end());
     std::sort(C.begin(), C.end());
 
     std::cout << "Sorted array\n";
-    for (const auto &i : C) {
-        std::cout << i << " ";
-    }
-    std::cout << '\n';
+    printArray(C);
     std::cout << "Minimal number in array " << C.front() << '\n';
     std::cout << "Maximal number in array " << C.back() << '\n';
 
@@ -37,4 +44,5 @@ void solveSecondTask() {
     }
     std::cout << "Geometric mean " << midValue << '\n';
 }
-#endif //MYTONATASKS_B_H
+
+#endif
